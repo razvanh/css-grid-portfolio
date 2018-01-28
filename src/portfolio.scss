@@ -1,3 +1,124 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
 body {
-    background: red;
+    font-family: "adelle-sans",'Open Sans', 'Helvetica Neue',-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 900;
+}
+// 2.986em
+// 2.488em
+// 2.074em
+// 1.728em
+// 1.44em
+// 1.2em
+
+h1 {
+    font-size: 2.986em;
+}
+
+h2, .size-h2 {
+    font-size: 2.488em;
+}
+
+h3, .size-h3 {
+    font-size: 2.074em;
+}
+
+h4, .size-h4{
+    font-size: 1.728em;
+}
+
+h5, .size-h5{
+    font-size: 1.44em;
+}
+
+h6, .size-h6{
+    font-size: 1.2em;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    margin:0;
+    padding:0;
+    list-style-type: none;
+
+    & li {
+        padding:1em;
+        border:1px rgb(104, 104, 104) dotted;
+    }
+}
+
+
+.grid {
+    display: grid;
+}
+
+.intro-grid {
+    grid-template-columns: repeat(auto-fit, minmax(12em,1fr));
+    grid-gap: 1rem;
+}
+
+.grid-center {
+    align-content: center;
+}
+.portfolio-item {
+    padding:1rem;
+    grid-gap:1rem;
+    grid-template-columns: 1fr 1fr 3fr 1fr;
+    grid-template-rows: 100px 100px 25% auto;
+    & p {
+        margin:0 0 1rem 0;
+    }
+    & .project-description {
+        font-size: 18px;
+        line-height: 1.75;
+    }
+
+    & h2 {
+        grid-column: 1 / -1;
+    }
+
+    & .visuals {
+        & h3 {
+            margin-top:0;
+        }
+        & img{
+        border:.5rem #ffee58 solid;
+        }
+    }
+}
+
+.project-description {
+    grid-column: 3;
+}
+
+.visuals {
+    grid-row:span 3; 
+    grid-column:span 2;
+}
+
+.project-info {
+    & h3 {
+        margin-top:0;
+    }
+}
+
+#intro {
+    background-color: #abbec7;
+    min-height:100vh;
+    border:1em #fff solid;
+
+    & h1 {
+        margin-left:1rem;
+    }
 }
