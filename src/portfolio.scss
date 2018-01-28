@@ -12,12 +12,6 @@ body {
 h1,h2,h3,h4,h5,h6 {
     font-weight: 900;
 }
-// 2.986em
-// 2.488em
-// 2.074em
-// 1.728em
-// 1.44em
-// 1.2em
 
 h1 {
     font-size: 2.986em;
@@ -72,6 +66,7 @@ ul {
     align-content: center;
 }
 .portfolio-item {
+    margin:6rem 0;
     padding:1rem;
     grid-gap:1rem;
     grid-template-columns: 1fr 1fr 3fr 1fr;
@@ -80,6 +75,7 @@ ul {
         margin:0 0 1rem 0;
     }
     & .project-description {
+        grid-column: 1 / span 3;
         font-size: 18px;
         line-height: 1.75;
     }
@@ -89,6 +85,9 @@ ul {
     }
 
     & .visuals {
+        grid-row:span 3; 
+        grid-column:span 3;
+
         & h3 {
             margin-top:0;
         }
@@ -96,29 +95,33 @@ ul {
         border:.5rem #ffee58 solid;
         }
     }
+
+    & .project-info {
+        & h3 {
+            margin-top:0;
+        }
+    }
 }
 
-.project-description {
-    grid-column: 3;
-}
 
-.visuals {
-    grid-row:span 3; 
-    grid-column:span 2;
-}
-
-.project-info {
-    & h3 {
-        margin-top:0;
+.portfolio-item--visual {
+    & .visuals {
+        grid-column: span 3;
     }
 }
 
 #intro {
-    background-color: #abbec7;
+    background-color:rgb(145, 120, 196);
     min-height:100vh;
     border:1em #fff solid;
+    animation: bg-transition 20s infinite;
 
     & h1 {
         margin-left:1rem;
     }
 }
+
+@keyframes bg-transition {
+    0%   { background-color: rgb(145, 120, 196); }
+    50% { background-color: #abbec7; }
+  }
