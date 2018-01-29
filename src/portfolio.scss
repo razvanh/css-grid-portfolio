@@ -60,6 +60,7 @@ ul {
 .intro-grid {
     grid-template-columns: repeat(auto-fit, minmax(12em,1fr));
     grid-gap: 1rem;
+    margin:1rem;
 }
 
 .grid-center {
@@ -70,7 +71,7 @@ ul {
     padding:1rem;
     grid-gap:1rem;
     grid-template-columns: 1fr 1fr 3fr 1fr;
-    grid-template-rows: 100px 100px 25% auto;
+    grid-template-rows: auto 100px 25% auto;
     & p {
         margin:0 0 1rem 0;
     }
