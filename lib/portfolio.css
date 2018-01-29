@@ -46,6 +46,12 @@ ul {
   grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
   grid-gap: 1rem;
   margin: 1rem; }
+  .intro-grid a {
+    color: #000;
+    text-decoration: none;
+    transition: color 2s; }
+  .intro-grid a:hover {
+    color: #fff; }
 
 .grid-center {
   align-content: center; }
